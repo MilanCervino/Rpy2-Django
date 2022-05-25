@@ -1,0 +1,9 @@
+---
+title: "Report"
+params:
+  res: NA
+---
+
+## Test
+
+### Result = ``r params$res``

@@ -1,0 +1,22 @@
+{% extends 'pocdjangoapp/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="display-4 mb-5">Dashboard</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <form action="generatefromfile/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="panel">
+        <button class="btn btn-primary" type="submit">Upload</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
